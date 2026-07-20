@@ -195,7 +195,11 @@ Download the latest APK and sideload it:
 3. Toggle the catalogs you want, then click **Install to Stremio**.
 
 ### 🧩 Browser extension
-Load it in your browser (Chrome/Edge/Brave: Developer mode → *Load unpacked*; Firefox: *Load Temporary Add-on*), then paste your Config UID from the app. It then auto-tracks anime as you watch on supported sites.
+Download the extension and load it unpacked:
+
+**[⬇️ Download watchario-extension.zip](https://github.com/ttsiligkoudis/watchario-app/releases/download/extension-latest/watchario-extension.zip)**
+
+Unzip it, then load it in your browser (Chrome/Edge/Brave: `chrome://extensions` → Developer mode → *Load unpacked*; Firefox: `about:debugging` → *Load Temporary Add-on*) and paste your Config UID from the app. It then auto-tracks anime as you watch on Crunchyroll, HiAnime/Zoro, and Aniwave — with an opt-in "track this site" button for anywhere else. Full install steps are in the [release notes](https://github.com/ttsiligkoudis/watchario-app/releases/tag/extension-latest).
 
 ---
 

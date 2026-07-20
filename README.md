@@ -13,7 +13,7 @@ One account. Every tracker. On the web, on your phone, on your TV, in Stremio, a
 [![Download Android](https://img.shields.io/badge/Download-Android%20APK-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/ttsiligkoudis/watchario-app/releases/download/android-latest/watchario.apk)
 [![Install on Stremio](https://img.shields.io/badge/Add%20to-Stremio-7B5BF5?style=for-the-badge&logo=stremio&logoColor=white)](https://watchario.app)
 
-[Why Watchario](#why-watchario) · [What you can do](#what-you-can-do) · [Where it runs](#where-it-runs) · [What works where](#what-works-where) · [Get Watchario](#get-watchario) · [Data & API](#open-data--api) · [FAQ](#faq)
+[Why Watchario](#why-watchario) · [How it compares](#how-watchario-compares) · [What you can do](#what-you-can-do) · [Built seriously](#built-seriously) · [Where it runs](#where-it-runs) · [What works where](#what-works-where) · [Get Watchario](#get-watchario) · [Data & API](#open-data--api) · [FAQ](#faq)
 
 </div>
 
@@ -37,6 +37,30 @@ Link the services you already use — AniList, MyAnimeList, Kitsu, Trakt (or jus
 
 <!-- A short loop of a sync fan-out is the single best thing to show here. -->
 <!-- ![Sync fan-out](assets/gifs/sync-fanout.gif) -->
+
+---
+
+## How Watchario compares
+
+Most trackers make you pick a side: one service, or one surface, or anime *or* live-action. Watchario is built to be the layer that sits above all of them.
+
+| | **Watchario** | Single-service apps<br><sub>(AniList / MAL app)</sub> | Live-action trackers<br><sub>(Trakt / Simkl)</sub> | Stremio anime addons<br><sub>(Anime Kitsu, animeo…)</sub> |
+|---|:---:|:---:|:---:|:---:|
+| Tracks anime | ✅ | ✅ | partial | ✅ |
+| Tracks movies & series | ✅ | — | ✅ | — |
+| **Lockstep multi-service sync** | ✅ | — | — | — |
+| Links AniList **+** MAL **+** Kitsu **+** Trakt at once | ✅ | — | — | — |
+| Standalone web app **and** native apps | ✅ | ✅ | ✅ | — |
+| TV / leanback app | ✅ | rare | rare | — |
+| Works inside Stremio (edit entries there) | ✅ | — | — | catalog only |
+| Auto-track from streaming sites (extension) | ✅ | — | — | — |
+| Plex / Jellyfin / Emby scrobbling | ✅ | — | ✅ | — |
+| AniSkip OP/ED/recap skipping | ✅ | — | — | — |
+| Canon / filler tags & cour slicing | ✅ | — | — | — |
+| Episode-release notifications + calendar | ✅ | some | ✅ | — |
+| Public REST API | ✅ | ✅ | ✅ | — |
+
+> Watchario is the **tracker + player shell**, not a streaming source — it manages your lists and plays streams you bring via Stremio-protocol addons. See [how you actually watch](#how-you-actually-watch).
 
 ---
 
@@ -83,15 +107,29 @@ Every feature the app uses is exposed behind a Swagger-documented JSON API. The 
 
 ---
 
+## Built seriously
+
+Watchario isn't a weekend script wrapping someone else's app — it's a polished product engineered to feel native everywhere.
+
+- **Two purpose-built video engines.** libVLC powers playback on phones (Stremio-style chrome, immersive fullscreen drawn under the display cutout); Media3 / ExoPlayer powers Android TV with D-pad-first controls — plus **HDR→SDR tone-mapping** so high-dynamic-range sources look right on every panel.
+- **Franchise-aware seasons.** Watchario walks AniList's relation graph to reconstruct real seasons 1..N and **slices split-cour shows** back to correct per-cour numbering — the thing generic trackers get wrong.
+- **Seven-namespace ID mapping, refreshed daily.** One title resolves across AniList / Kitsu / MAL / IMDb / TMDB / TheTVDB / AniDB, kept current by an automated pipeline (and [published for anyone to use](#open-data--api)).
+- **Privacy-respecting crash reporting.** Diagnostics are opt-out and **redacted on-device** — API keys and secrets are stripped before anything is uploaded.
+- **One backend, every surface.** A single service simultaneously serves the web app, the public REST API, the Stremio addon, and the notification schedulers — so features land everywhere at once and stay consistent.
+
+---
+
 ## Where it runs
 
 | Surface | What it is | Media types |
 |---|---|:--|
 | **Web app / PWA** | The full client at **[watchario.app](https://watchario.app)** — browse, watch, track, installable to your home screen. | anime · movies · series |
-| **Native apps** | Android, Android TV / Google TV, iOS, Windows, macOS — the same UI, plus native video engines and OS-level notifications. | anime · movies · series |
-| **Public REST API** | `/api/v1`, [Swagger docs](https://watchario.app/api/docs). Build your own client on it. | anime · movies · series |
+| **Android & Android TV** | Native apps with native video engines, OS-level notifications, and a leanback TV layout. | anime · movies · series |
 | **Stremio addon** | Adds your anime catalogs, in-Stremio entry editing, per-episode metadata, and AniSkip hints. | anime |
 | **Browser extension** | Auto-tracks anime as you watch on supported sites. | anime |
+| **Public REST API** | `/api/v1`, [Swagger docs](https://watchario.app/api/docs). Build your own client on it. | anime · movies · series |
+
+> Desktop (Windows / macOS) and iOS builds are in development. Today the web app is the fastest way onto every platform — it installs as a PWA on iOS and desktop alike.
 
 ---
 
@@ -104,7 +142,7 @@ Watchario is genuinely multi-media, but a few features are anime-specific by nat
 | Track & multi-service sync | ✅ | ✅ | ✅ |
 | Browse / Discover / Library | ✅ | ✅ | ✅ |
 | Watch (player · streams · subtitles) | ✅ | ✅ | ✅ |
-| Native apps (5 platforms) | ✅ | ✅ | ✅ |
+| Native apps (Android & Android TV) | ✅ | ✅ | ✅ |
 | Public REST API | ✅ | ✅ | ✅ |
 | Weekly calendar | ✅ | — | ✅ |
 | Release notifications | ✅ | — | ✅ |
@@ -116,6 +154,26 @@ Watchario is genuinely multi-media, but a few features are anime-specific by nat
 | Home-server scrobbling | ✅ | — | — |
 
 > Which services back which media type: **anime** syncs across AniList, MyAnimeList, and Kitsu (and can also live on Trakt or a native Watchario account); **movies & series** are tracked via **Trakt**.
+
+---
+
+## How you actually watch
+
+Watchario is the **tracker + player shell** — it manages your lists, metadata, and progress, and plays streams you bring. Here's the setup most people run:
+
+```
+┌─────────────────────────────────────────────────────┐
+│  Watchario          ←  lists, progress, playback UI  │  ← the piece you install
+├─────────────────────────────────────────────────────┤
+│  A stream addon     ←  Torrentio / Comet / MediaFusion │
+│  (usually + debrid)    supply the actual video sources │
+└─────────────────────────────────────────────────────┘
+```
+
+- **Watchario** keeps your lists in lockstep, enriches every episode, and gives you the player, the calendar, and the notifications.
+- **A Stremio-protocol stream addon** (Torrentio, Comet, MediaFusion…), typically paired with a debrid service, supplies the streams. Watchario's quick-setup builds and validates those URLs from a single API key.
+
+This separation is deliberate: trackers are durable, scraper addons come and go. Bring whichever streams you like — your lists don't care where the video came from.
 
 ---
 
@@ -147,7 +205,7 @@ We maintain the cross-service **ID-mapping data** that powers "one title, tracke
 
 ➡️ **[Download the mapping data & format docs](docs/mapping-data.md)**
 
-The full app API (search, match, media metadata, streams, subtitles, sync, notifications) is documented interactively at **[watchario.app/api/docs](https://watchario.app/api/docs)**.
+The full app API (search, match, media metadata, streams, subtitles, sync, notifications) is documented interactively at **[watchario.app/api/docs](https://watchario.app/api/docs)** — the browser extension is built entirely on it, and so can your own dashboard or scrobble script.
 
 ---
 
@@ -178,10 +236,34 @@ Anime and series (episode-based) get both a weekly calendar and release notifica
 </details>
 
 <details>
+<summary><strong>AniSkip auto-skip isn't working in Stremio.</strong></summary>
+
+Stock Stremio doesn't honour `skipIntro` / `skipOutro` / `skipRecap` hints — you need a compatible client (Stremio Enhanced is the easiest). The Watchario web and native players honour them natively, so auto-skip works out of the box there.
+</details>
+
+<details>
+<summary><strong>I see "Needs re-auth" on a service.</strong></summary>
+
+Its token expired or was revoked. Re-authenticate that service from your settings — the rest of your configuration, and your other linked accounts, are untouched.
+</details>
+
+<details>
 <summary><strong>Where is my data stored?</strong></summary>
 
 In a database on the Watchario server, keyed to your install. Provider tokens are stored only to keep your sync working, and nothing is shared with third parties.
 </details>
+
+---
+
+## Acknowledgements
+
+Watchario stands on the shoulders of the open anime-data community:
+
+- [Fribb/anime-lists](https://github.com/Fribb/anime-lists) and the [manami-project anime-offline-database](https://github.com/manami-project/anime-offline-database) — cross-service ID mapping
+- [AniSkip](https://aniskip.com) — community-curated intro/outro/recap markers
+- [AnimeFillerList](https://www.animefillerlist.com) — canon/filler tagging
+- [Stremio](https://www.stremio.com) and the Cinemeta addon — the addon platform and base metadata
+- [OpenSubtitles](https://opensubtitles.com) and [Wyzie](https://sub.wyzie.ru) — subtitles
 
 ---
 
@@ -190,5 +272,7 @@ In a database on the Watchario server, keyed to your install. Provider tokens ar
 **Questions, bugs, or feature requests? [Open an issue.](https://github.com/ttsiligkoudis/watchario-app/issues)**
 
 Watchario · [watchario.app](https://watchario.app)
+
+<sub>Not affiliated with AniList, Kitsu, MyAnimeList, Trakt or Stremio.</sub>
 
 </div>

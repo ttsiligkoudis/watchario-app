@@ -1,0 +1,10 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+
+# Nothing is built in this repo — it hosts docs + release assets only.
+# Large binaries (APK, mapping JSON) live as GitHub Release assets, never committed.

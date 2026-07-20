@@ -17,6 +17,10 @@ One account. Every tracker. On the web, on your phone, on your TV, in Stremio, a
 
 </div>
 
+<p align="center">
+  <img src="assets/screenshots/dashboard.jpg" alt="The Watchario dashboard — anime, movies and series tracked side by side" width="100%">
+</p>
+
 ---
 
 ## Why Watchario
@@ -44,16 +48,28 @@ Link **AniList, MyAnimeList, Kitsu, and Trakt** to one account. Every progress /
 ### 🧭 Browse & discover — anime, movies & series
 A single client for all three. Flip the media-type switch and Discover fills with what's **trending, seasonal, and airing**; browse by tag, studio, or staff; search everything. Your **Library** has status tabs (Watching / Completed / Planning / Paused / Dropped / Rewatching), title search, genre filter, and infinite scroll. Rich detail pages carry posters, scores, episode lists with thumbnails, recommendations, related entries, and deep-links to the same title on every service.
 
-<!-- ![Discover & library](assets/screenshots/discover.png) -->
+<p align="center">
+  <img src="assets/screenshots/discover-movies.jpg" alt="Discover — browse trending movies" width="49%">
+  <img src="assets/screenshots/library-anime.jpg" alt="Your library — anime, with status tabs and progress" width="49%">
+</p>
 
 ### ▶️ Watch, with your own streams
 An integrated player on web and native, for anime, movies, and series alike. Bring your own streams through the **Stremio addon protocol** — Torrentio, MediaFusion, Comet, Jackettio, AIOStreams all work, with a quick-setup that builds and validates the URLs from a single debrid API key. **Subtitles** come merged and de-duplicated from OpenSubtitles + Wyzie. On anime, community **AniSkip** markers auto-skip openings, endings, and recaps.
+
+<p align="center">
+  <img src="assets/screenshots/detail.jpg" alt="A title detail page with cross-service source links" width="49%">
+  <img src="assets/screenshots/episodes.jpg" alt="Episode list with thumbnails and air dates" width="49%">
+</p>
 
 ### 📺 Great on a TV
 A dedicated leanback layout with **D-pad navigation**, and **QR-code device pairing** so you never type a password with a remote. Android builds ship a combined arm64 + arm APK so budget Google TV boxes work too, with a hardware-accelerated ExoPlayer path (HDR tone-mapping included).
 
 ### 🗓️ Calendar & 🔔 notifications
 A **weekly calendar** of upcoming and recent episodes for the anime and series you track. Release notifications fire the moment an episode airs — including a *"the show you planned just started airing"* heads-up — delivered in-app and as real **Web Push** (works with the tab closed, and on your phone home screen as a PWA).
+
+<p align="center">
+  <img src="assets/screenshots/calendar.jpg" alt="Weekly calendar of upcoming anime and Trakt series episodes" width="100%">
+</p>
 
 ### 🧩 Auto-track from where you already watch *(anime)*
 - **Browser extension** (Chrome / Edge / Brave / Firefox): auto-updates your list as you watch on Crunchyroll, HiAnime/Zoro, and Aniwave — plus an opt-in "track this site" fallback for anywhere else.

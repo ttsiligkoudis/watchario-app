@@ -1,0 +1,30 @@
+Copyright (c) 2026 Watchario. All rights reserved.
+
+This repository is the public home for the Watchario product: documentation,
+marketing material, release downloads, and mirrored reference data. The
+Watchario application source code is NOT included here and remains proprietary.
+
+Documentation and marketing content
+-----------------------------------
+The text, images, and other documentation in this repository are provided for
+informational purposes only. You may link to and quote them for the purpose of
+describing or reviewing Watchario. All other rights are reserved; you may not
+republish this content as your own or use the Watchario name, logo, or branding
+to imply endorsement.
+
+Application binaries (e.g. the Android APK)
+-------------------------------------------
+Binaries published under this repository's Releases are provided free of charge
+for personal use, "AS IS", without warranty of any kind. They may not be
+repackaged, resold, or redistributed as part of another product.
+
+Reference data (anime/media ID mappings)
+-----------------------------------------
+The ID-mapping datasets mirrored under this repository's Releases are derived
+from third-party open datasets (including Fribb/anime-lists and the
+manami-project anime-offline-database) plus Watchario's own enrichment overlay.
+The upstream data remains under its original license; please consult those
+projects for terms. Watchario's enrichment additions are provided "AS IS" for
+convenience, with no warranty and no guarantee of accuracy or availability.
+
+For commercial licensing or other inquiries, contact the maintainer.

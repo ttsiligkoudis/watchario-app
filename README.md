@@ -3,7 +3,7 @@
 <!-- Drop a logo/banner here once you have one: assets/banner.png -->
 <!-- ![Watchario](assets/banner.png) -->
 
-# Watchario
+# Watchario 
 
 ### Track everything you watch — **anime, movies & series** — kept in lockstep across **AniList**, **MyAnimeList**, **Kitsu** & **Trakt**, and watchable anywhere.
 

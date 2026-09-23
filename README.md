@@ -11,6 +11,8 @@ One account. Every tracker. On the web, on your phone, on your TV, in Stremio, a
 
 [![Open the web app](https://img.shields.io/badge/Open-Web%20App-3B82F6?style=for-the-badge)](https://watchario.app)
 [![Download Android](https://img.shields.io/badge/Download-Android%20APK-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/ttsiligkoudis/watchario-app/releases/download/android-latest/watchario.apk)
+[![Download Windows](https://img.shields.io/badge/Download-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/ttsiligkoudis/watchario-app/releases/tag/windows-latest)
+[![Install on iOS](https://img.shields.io/badge/Install-iPhone%20%26%20iPad-000000?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/ttsiligkoudis/watchario-app/releases/tag/ios-latest)
 [![Install on Stremio](https://img.shields.io/badge/Add%20to-Stremio-7B5BF5?style=for-the-badge&logo=stremio&logoColor=white)](https://watchario.app)
 
 [Why Watchario](#why-watchario) · [How it compares](#how-watchario-compares) · [What you can do](#what-you-can-do) · [Built seriously](#built-seriously) · [Where it runs](#where-it-runs) · [What works where](#what-works-where) · [Get Watchario](#get-watchario) · [Data & API](#open-data--api) · [FAQ](#faq)
@@ -86,7 +88,7 @@ An integrated player on web and native, for anime, movies, and series alike. Bri
 </p>
 
 ### 📺 Great on a TV
-A dedicated leanback layout with **D-pad navigation**, and **QR-code device pairing** so you never type a password with a remote. Android builds ship a combined arm64 + arm APK so budget Google TV boxes work too, with a hardware-accelerated ExoPlayer path (HDR tone-mapping included).
+A dedicated leanback layout with **D-pad navigation**, and **QR-code device pairing** so you never type a password with a remote. Android builds ship a combined arm64 + arm APK so budget Google TV boxes work too, with a hardware-accelerated ExoPlayer path (HDR tone-mapping included). An **LG webOS** app is in pre-release (LG Content Store submission in progress), and **Samsung Tizen** is planned.
 
 ### 🗓️ Calendar & 🔔 notifications
 A **weekly calendar** of upcoming and recent episodes for the anime and series you track. Release notifications fire the moment an episode airs — including a *"the show you planned just started airing"* heads-up — delivered in-app and as real **Web Push** (works with the tab closed, and on your phone home screen as a PWA).
@@ -125,11 +127,14 @@ Watchario isn't a weekend script wrapping someone else's app — it's a polished
 |---|---|:--|
 | **Web app / PWA** | The full client at **[watchario.app](https://watchario.app)** — browse, watch, track, installable to your home screen. | anime · movies · series |
 | **Android & Android TV** | Native apps with native video engines, OS-level notifications, and a leanback TV layout. | anime · movies · series |
+| **Windows** | Native desktop app — per-user installer, no admin prompt. | anime · movies · series |
+| **iPhone & iPad** | Native app with the libVLC player, sideloaded through SideStore or AltStore (not on the App Store). | anime · movies · series |
+| **LG webOS TV** *(pre-release)* | TV app with D-pad navigation — sideload the `.ipk` in Developer Mode while the LG Content Store listing is in review. | anime · movies · series |
 | **Stremio addon** | Adds your anime catalogs, in-Stremio entry editing, per-episode metadata, and AniSkip hints. | anime |
 | **Browser extension** | Auto-tracks anime as you watch on supported sites. | anime |
 | **Public REST API** | `/api/v1`, [Swagger docs](https://watchario.app/api/docs). Build your own client on it. | anime · movies · series |
 
-> Desktop (Windows / macOS) and iOS builds are in development. Today the web app is the fastest way onto every platform — it installs as a PWA on iOS and desktop alike.
+> **Coming next:** LG Content Store listing (in progress), Samsung Tizen TV app (planned), macOS (in development). Anywhere else, the web app installs as a PWA.
 
 ---
 
@@ -142,7 +147,7 @@ Watchario is genuinely multi-media, but a few features are anime-specific by nat
 | Track & multi-service sync | ✅ | ✅ | ✅ |
 | Browse / Discover / Library | ✅ | ✅ | ✅ |
 | Watch (player · streams · subtitles) | ✅ | ✅ | ✅ |
-| Native apps (Android & Android TV) | ✅ | ✅ | ✅ |
+| Native apps (Android, Android TV, Windows, iOS) | ✅ | ✅ | ✅ |
 | Public REST API | ✅ | ✅ | ✅ |
 | Weekly calendar | ✅ | — | ✅ |
 | Release notifications | ✅ | — | ✅ |
@@ -189,9 +194,29 @@ Download the latest APK and sideload it:
 
 > If Android warns about a signature conflict on update, uninstall the previous build first. Every release is signed with the same key, so normal updates install in place.
 
+### 🪟 Windows
+Download the installer from the **[latest Windows release](https://github.com/ttsiligkoudis/watchario-app/releases/tag/windows-latest)** and run it — it installs for the current user, with no administrator prompt.
+
+> The installer isn't code-signed yet, so SmartScreen shows *"Windows protected your PC"* — choose **More info → Run anyway**.
+
+### 🍎 iPhone & iPad
+Watchario isn't on the App Store, so you sideload it with your own Apple ID. **[SideStore](https://sidestore.io)** is the recommended way — once it's set up it re-signs apps on the device itself, no computer needed every week:
+
+1. Set up SideStore by following its own guide: **[docs.sidestore.io — prerequisites](https://docs.sidestore.io/docs/installation/prerequisites)**.
+2. In SideStore, open **Sources → +** and add:
+   ```
+   https://watchario.app/altstore.json
+   ```
+3. Install Watchario from that source. Refresh it in SideStore at least once a week (a free Apple ID signs apps for 7 days).
+
+AltStore works with the same source URL. The full guide — including AltStore setup and troubleshooting — is on the **[latest iOS release](https://github.com/ttsiligkoudis/watchario-app/releases/tag/ios-latest)**.
+
+### 📺 LG webOS TV *(pre-release)*
+The LG Content Store listing is in progress. Until it's live, TVs in **Developer Mode** can sideload the `.ipk` from the **[latest webOS build](https://github.com/ttsiligkoudis/watchario-app/releases/tag/webos-latest)**. Sideloaded builds don't update themselves — install the new `.ipk` to update.
+
 ### 🎬 Stremio addon
 1. Open **[watchario.app](https://watchario.app)**.
-2. Sign in with AniList, MyAnimeList, or Kitsu (or use the public catalogs).
+2. Sign in — with Google, an email and password, or AniList / MyAnimeList / Kitsu / Trakt.
 3. Toggle the catalogs you want, then click **Install to Stremio**.
 
 ### 🧩 Browser extension
@@ -224,7 +249,7 @@ No — and that's deliberate. Watchario is the **tracker + player shell**: it ma
 <details>
 <summary><strong>Do I need an AniList/MAL/Kitsu/Trakt account?</strong></summary>
 
-No. You can create a **native Watchario account** (email + password) and keep your entire library on Watchario, with no external service linked. Link external trackers whenever you want them kept in sync.
+No. You can create a **native Watchario account** (Google, or email + password) and keep your entire library on Watchario, with no external service linked. Link external trackers whenever you want them kept in sync.
 </details>
 
 <details>

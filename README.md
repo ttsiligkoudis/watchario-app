@@ -1,307 +1,215 @@
+[README.md](https://github.com/user-attachments/files/33382002/README.md)
 <div align="center">
 
-<!-- Drop a logo/banner here once you have one: assets/banner.png -->
-<!-- ![Watchario](assets/banner.png) -->
+# Watchario
 
-# Watchario 
+### Everything you watch. One place to call home.
 
-### Track everything you watch — **anime, movies & series** — kept in lockstep across **AniList**, **MyAnimeList**, **Kitsu** & **Trakt**, and watchable anywhere.
+Anime, movies and TV together. Your favorites, your sources and your progress, on every screen.
 
-One account. Every tracker. On the web, on your phone, on your TV, in Stremio, and in your browser — update your progress once and it lands everywhere.
-
-[![Open the web app](https://img.shields.io/badge/Open-Web%20App-3B82F6?style=for-the-badge)](https://watchario.app)
+[![Open in browser](https://img.shields.io/badge/Open-in%20browser-3B82F6?style=for-the-badge)](https://watchario.app/home)
 [![Download Android](https://img.shields.io/badge/Download-Android%20APK-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/ttsiligkoudis/watchario-app/releases/download/android-latest/watchario.apk)
 [![Download Windows](https://img.shields.io/badge/Download-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/ttsiligkoudis/watchario-app/releases/tag/windows-latest)
 [![Install on iOS](https://img.shields.io/badge/Install-iPhone%20%26%20iPad-000000?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/ttsiligkoudis/watchario-app/releases/tag/ios-latest)
-[![Install on Stremio](https://img.shields.io/badge/Add%20to-Stremio-7B5BF5?style=for-the-badge&logo=stremio&logoColor=white)](https://watchario.app)
 
-[Why Watchario](#why-watchario) · [How it compares](#how-watchario-compares) · [What you can do](#what-you-can-do) · [Built seriously](#built-seriously) · [Where it runs](#where-it-runs) · [What works where](#what-works-where) · [Get Watchario](#get-watchario) · [Data & API](#open-data--api) · [FAQ](#faq)
+**[watchario.app](https://watchario.app)** · **[Download](https://watchario.app/get)** · **[Pricing](https://watchario.app/pricing)** · **[Changelog](https://watchario.app/changelog)**
+
+Free to start. Bring your own sources.
 
 </div>
 
+> [!IMPORTANT]
+> **Watchario does not host, store, supply, index or stream any video content.** Playback uses streaming sources you configure yourself: Stremio-protocol addons and, if you choose, your own debrid account. Watchario ships none of them, and a paid plan unlocks app features, not content.
+
 <p align="center">
-  <img src="assets/screenshots/dashboard.jpg" alt="The Watchario dashboard — anime, movies and series tracked side by side" width="100%">
+  <img src="assets/screenshots/dashboard.jpg" alt="The Watchario dashboard with anime, movies and series side by side" width="100%">
 </p>
 
 ---
 
-## Why Watchario
+## Press play. Settle in.
 
-If you track what you watch, you've lived this:
+A built-in player that takes care of the little things, in your browser and in the native apps.
 
-> An episode ends. You open a tab, find AniList, update progress. Then you remember your friends are on MyAnimeList, so you do it again there. Three episodes later you give up — and your lists rot for six months.
-
-Watchario fixes it with one promise:
-
-> **Update once, everywhere. Watch anywhere, tracked automatically.**
-
-Link the services you already use — AniList, MyAnimeList, Kitsu, Trakt (or just use a built-in Watchario account) — pick one as your source of truth, and every change fans out to the rest. Watch on the Watchario web app, on a native app, or through Stremio, and your progress follows you.
-
-<!-- A short loop of a sync fan-out is the single best thing to show here. -->
-<!-- ![Sync fan-out](assets/gifs/sync-fanout.gif) -->
-
----
-
-## How Watchario compares
-
-Most trackers make you pick a side: one service, or one surface, or anime *or* live-action. Watchario is built to be the layer that sits above all of them.
-
-| | **Watchario** | Single-service apps<br><sub>(AniList / MAL app)</sub> | Live-action trackers<br><sub>(Trakt / Simkl)</sub> | Stremio anime addons<br><sub>(Anime Kitsu, animeo…)</sub> |
-|---|:---:|:---:|:---:|:---:|
-| Tracks anime | ✅ | ✅ | partial | ✅ |
-| Tracks movies & series | ✅ | — | ✅ | — |
-| **Lockstep multi-service sync** | ✅ | — | — | — |
-| Links AniList **+** MAL **+** Kitsu **+** Trakt at once | ✅ | — | — | — |
-| Standalone web app **and** native apps | ✅ | ✅ | ✅ | — |
-| TV / leanback app | ✅ | rare | rare | — |
-| Works inside Stremio (edit entries there) | ✅ | — | — | catalog only |
-| Auto-track from streaming sites (extension) | ✅ | — | — | — |
-| Plex / Jellyfin / Emby scrobbling | ✅ | — | ✅ | — |
-| AniSkip OP/ED/recap skipping | ✅ | — | — | — |
-| Canon / filler tags & cour slicing | ✅ | — | — | — |
-| Episode-release notifications + calendar | ✅ | some | ✅ | — |
-| Public REST API | ✅ | ✅ | ✅ | — |
-
-> Watchario is the **tracker + player shell**, not a streaming source — it manages your lists and plays streams you bring via Stremio-protocol addons. See [how you actually watch](#how-you-actually-watch).
-
----
-
-## What you can do
-
-### 🔁 Lockstep multi-service sync — the headline
-Link **AniList, MyAnimeList, Kitsu, and Trakt** to one account. Every progress / score / status change writes to your **primary** service and mirrors concurrently to every linked secondary, with scores and statuses translated to each service's own scale. Promote any account to primary with a click, one-shot-backfill your whole library onto a newly linked service, and get a clear **"needs re-auth"** flag instead of silent drift when a token expires. No external tracker? Create a **native Watchario account** and keep your whole library on Watchario itself.
-
-### 🧭 Browse & discover — anime, movies & series
-A single client for all three. Flip the media-type switch and Discover fills with what's **trending, seasonal, and airing**; browse by tag, studio, or staff; search everything. Your **Library** has status tabs (Watching / Completed / Planning / Paused / Dropped / Rewatching), title search, genre filter, and infinite scroll. Rich detail pages carry posters, scores, episode lists with thumbnails, recommendations, related entries, and deep-links to the same title on every service.
+- **Built-in player.** Fullscreen playback with controls that work from the couch, or open the stream in your favorite external player.
+- **Big-screen formats in the browser.** Subtitles embedded in MKV files (styled ASS/SSA included); Dolby Digital, Dolby Digital Plus (E-AC-3) and DTS audio converted on your device with the video untouched; an audio-track picker for multi-language releases; and MKV playback on iPhone and iPad.
+- **Picks the source for you.** Sources are chosen from what you picked before and ranked by your preferred audio language. On a series, the next episode stays on the same release and quality.
+- **Subtitles that fit the file.** Built-in search through Wyzie plus any subtitle addons you add, ranked against what you are playing (release name, file hash, runtime) and synced automatically when the timing is off. You can also adjust the timing by hand.
+- **Resume where you stopped.** Your place follows you from phone to desktop to TV.
+- **Skip intro and outro** *(Tier 1)*, using IntroDB and AniSkip markers.
+- **Offline downloads** *(Tier 2)*. Save episodes and films from your own configured sources in the native apps and watch without a connection. Not available on TV.
 
 <p align="center">
-  <img src="assets/screenshots/discover-movies.jpg" alt="Discover — browse trending movies" width="49%">
-  <img src="assets/screenshots/library-anime.jpg" alt="Your library — anime, with status tabs and progress" width="49%">
-</p>
-
-### ▶️ Watch, with your own streams
-An integrated player on web and native, for anime, movies, and series alike. Bring your own streams through the **Stremio addon protocol** — Torrentio, MediaFusion, Comet, Jackettio, AIOStreams all work, with a quick-setup that builds and validates the URLs from a single debrid API key. **Subtitles** come merged and de-duplicated from OpenSubtitles + Wyzie. On anime, community **AniSkip** markers auto-skip openings, endings, and recaps.
-
-<p align="center">
-  <img src="assets/screenshots/detail.jpg" alt="A title detail page with cross-service source links" width="49%">
+  <img src="assets/screenshots/detail.jpg" alt="A title page" width="49%">
   <img src="assets/screenshots/episodes.jpg" alt="Episode list with thumbnails and air dates" width="49%">
 </p>
 
-### 📺 Great on a TV
-A dedicated leanback layout with **D-pad navigation**, and **QR-code device pairing** so you never type a password with a remote. Android builds ship a combined arm64 + arm APK so budget Google TV boxes work too, with a hardware-accelerated ExoPlayer path (HDR tone-mapping included). An **LG webOS** app is in pre-release (LG Content Store submission in progress), and **Samsung Tizen** is planned.
+## Your sources. One simple setup.
 
-### 🗓️ Calendar & 🔔 notifications
-A **weekly calendar** of upcoming and recent episodes for the anime and series you track. Release notifications fire the moment an episode airs — including a *"the show you planned just started airing"* heads-up — delivered in-app and as real **Web Push** (works with the tab closed, and on your phone home screen as a PWA).
+- **One-click debrid setup.** Connect TorBox, Real-Debrid, AllDebrid, Premiumize, Debrid-Link, EasyDebrid or Offcloud (several just by approving a code) and Watchario installs and configures the source addons for you. The debrid service itself is a separate subscription.
+- **Every addon, under your control.** Install any Stremio-protocol addon, drag to reorder, and switch each part on or off: catalogues, details, search, streams and subtitles.
+- **Import from Stremio.** Sign in to Stremio from your own device and bring your addons across. Your Stremio password is never sent to Watchario.
+- **Stream filtering** *(Tier 1)*. A shorter source list, shaped around what you want to watch.
+
+## Your next favorite is waiting.
+
+- **Catalogues of its own.** Movies and TV from Trakt, anime from AniList and MyAnimeList. No catalogue addon needed.
+- **Preview before you press play.** Trailers on title tiles and a cinematic title page.
+- **The whole franchise**, in release order, plus rating posters with your own RPDB key.
 
 <p align="center">
-  <img src="assets/screenshots/calendar.jpg" alt="Weekly calendar of upcoming anime and Trakt series episodes" width="100%">
+  <img src="assets/screenshots/discover-movies.jpg" alt="Discover: trending movies" width="49%">
+  <img src="assets/screenshots/library-anime.jpg" alt="The library, with status tabs and progress" width="49%">
 </p>
 
-### 🧩 Auto-track from where you already watch *(anime)*
-- **Browser extension** (Chrome / Edge / Brave / Firefox): auto-updates your list as you watch on Crunchyroll, HiAnime/Zoro, and Aniwave — plus an opt-in "track this site" fallback for anywhere else.
-- **Home-server scrobbling**: point a **Plex / Jellyfin / Emby** webhook at Watchario and finished episodes scrobble onto your linked trackers automatically.
+## One library. Always with you.
 
-### 🧬 Anime superpowers
-Because it started life as an anime tracker, Watchario does things generic trackers don't: **canon / filler tagging**, **cour-aware episode numbering** and **franchise-season grouping** (so a split-cour show numbers correctly and a multi-season franchise collapses into one entry), and cross-referenced IDs across **seven namespaces** (AniList / Kitsu / MAL / IMDb / TMDB / TheTVDB / AniDB).
+- **One library, six trackers.** Your library lives in Watchario first and syncs out to whichever of AniList, MyAnimeList, Kitsu, Trakt, Simkl and MDBList you connect. A tracker being down never costs you progress; changes catch up when it is back.
+- **Alerts when it airs.** A new episode of something you are watching sends a browser notification, or a native notification in the Android app. Tap it and that episode starts playing. Every alert is also kept in the in-app notification bell. Series and anime on your Planning list alert you when they premiere.
+- **A calendar built around you**, from the shows on your list.
+- **Plex, Jellyfin and Emby.** Paste one webhook URL and the episodes you finish there are tracked.
 
-### 🔌 A public API
-Every feature the app uses is exposed behind a Swagger-documented JSON API. The browser extension is built entirely on it — your own dashboard or scrobble script can be too. Docs live at **[/api/docs](https://watchario.app/api/docs)**.
+<p align="center">
+  <img src="assets/screenshots/calendar.jpg" alt="Weekly calendar of upcoming episodes" width="100%">
+</p>
 
----
+## Anime gets the attention it deserves.
 
-## Built seriously
+- **Skip the filler** with canon and filler labels on every episode.
+- **Seasons that make sense.** Cour-aware numbering keeps split seasons in order.
+- **Titles your way.** English, Romaji or original script, used consistently everywhere.
 
-Watchario isn't a weekend script wrapping someone else's app — it's a polished product engineered to feel native everywhere.
+## Everyone gets their own space.
 
-- **Two purpose-built video engines.** libVLC powers playback on phones (Stremio-style chrome, immersive fullscreen drawn under the display cutout); Media3 / ExoPlayer powers Android TV with D-pad-first controls — plus **HDR→SDR tone-mapping** so high-dynamic-range sources look right on every panel.
-- **Franchise-aware seasons.** Watchario walks AniList's relation graph to reconstruct real seasons 1..N and **slices split-cour shows** back to correct per-cour numbering — the thing generic trackers get wrong.
-- **Seven-namespace ID mapping, refreshed daily.** One title resolves across AniList / Kitsu / MAL / IMDb / TMDB / TheTVDB / AniDB, kept current by an automated pipeline (and [published for anyone to use](#open-data--api)).
-- **Privacy-respecting crash reporting.** Diagnostics are opt-out and **redacted on-device** — API keys and secrets are stripped before anything is uploaded.
-- **One backend, every surface.** A single service simultaneously serves the web app, the public REST API, the Stremio addon, and the notification schedulers — so features land everywhere at once and stay consistent.
+- **A profile for everyone** *(Tier 2)*. Up to 6 profiles, each with its own library, progress and recommendations. The free plan has one.
+- **A space for kids** *(Tier 2)*. Kids profiles filter mature titles from browsing, search and recommendations.
+- **Your dashboard, your way** *(Tier 1)*. Choose the rows you see and the order they appear.
+- **Keep it personal** with PIN-protected profiles.
 
----
+## Your apps, working together
 
-## Where it runs
-
-| Surface | What it is | Media types |
-|---|---|:--|
-| **Web app / PWA** | The full client at **[watchario.app](https://watchario.app)** — browse, watch, track, installable to your home screen. | anime · movies · series |
-| **Android & Android TV** | Native apps with native video engines, OS-level notifications, and a leanback TV layout. | anime · movies · series |
-| **Windows** | Native desktop app — per-user installer, no admin prompt. | anime · movies · series |
-| **iPhone & iPad** | Native app with the libVLC player, sideloaded through SideStore or AltStore (not on the App Store). | anime · movies · series |
-| **LG webOS TV** *(pre-release)* | TV app with D-pad navigation — sideload the `.ipk` in Developer Mode while the LG Content Store listing is in review. | anime · movies · series |
-| **Stremio addon** | Adds your anime catalogs, in-Stremio entry editing, per-episode metadata, and AniSkip hints. | anime |
-| **Browser extension** | Auto-tracks anime as you watch on supported sites. | anime |
-| **Public REST API** | `/api/v1`, [Swagger docs](https://watchario.app/api/docs). Build your own client on it. | anime · movies · series |
-
-> **Coming next:** LG Content Store listing (in progress), Samsung Tizen TV app (planned), macOS (in development). Anywhere else, the web app installs as a PWA.
+- **Use it inside Stremio.** Install Watchario as a Stremio addon from your settings: your lists and catalogues appear in Stremio and what you play there is tracked. Skip-intro hints follow your streams into Stremio *(Tier 1)*.
+- **Play on your TV.** Send a stream from a native app to a compatible TV or Kodi over DLNA (apps only, not browsers).
+- **Sign in on your TV with your phone.** Scan a QR code instead of typing with the remote.
 
 ---
 
-## What works where
+## Plans
 
-Watchario is genuinely multi-media, but a few features are anime-specific by nature (a movie has no episodes to skip or slice). Here's the honest breakdown:
-
-| Capability | Anime | Movies | Series |
+| | **Basic** (free) | **Tier 1** | **Tier 2** |
 |---|:---:|:---:|:---:|
-| Track & multi-service sync | ✅ | ✅ | ✅ |
-| Browse / Discover / Library | ✅ | ✅ | ✅ |
-| Watch (player · streams · subtitles) | ✅ | ✅ | ✅ |
-| Native apps (Android, Android TV, Windows, iOS) | ✅ | ✅ | ✅ |
-| Public REST API | ✅ | ✅ | ✅ |
-| Weekly calendar | ✅ | — | ✅ |
-| Release notifications | ✅ | — | ✅ |
-| AniSkip OP/ED/recap skip | ✅ | — | — |
-| Canon / filler tags | ✅ | — | — |
-| Cour slicing & franchise grouping | ✅ | — | — |
-| Stremio addon catalogs | ✅ | — | — |
-| Browser-extension auto-track | ✅ | — | — |
-| Home-server scrobbling | ✅ | — | — |
+| Watch with your own sources, track, sync, calendar, episode alerts | ✅ | ✅ | ✅ |
+| Skip intro and outro (incl. Stremio hints) | | ✅ | ✅ |
+| Dashboard customisation | | ✅ | ✅ |
+| Stream filtering | | ✅ | ✅ |
+| Up to 6 profiles, including kids profiles | | | ✅ |
+| Offline downloads (native apps, not on TV) | | | ✅ |
 
-> Which services back which media type: **anime** syncs across AniList, MyAnimeList, and Kitsu (and can also live on Trakt or a native Watchario account); **movies & series** are tracked via **Trakt**.
-
----
-
-## How you actually watch
-
-Watchario is the **tracker + player shell** — it manages your lists, metadata, and progress, and plays streams you bring. Here's the setup most people run:
-
-```
-┌─────────────────────────────────────────────────────┐
-│  Watchario          ←  lists, progress, playback UI  │  ← the piece you install
-├─────────────────────────────────────────────────────┤
-│  A stream addon     ←  Torrentio / Comet / MediaFusion │
-│  (usually + debrid)    supply the actual video sources │
-└─────────────────────────────────────────────────────┘
-```
-
-- **Watchario** keeps your lists in lockstep, enriches every episode, and gives you the player, the calendar, and the notifications.
-- **A Stremio-protocol stream addon** (Torrentio, Comet, MediaFusion…), typically paired with a debrid service, supplies the streams. Watchario's quick-setup builds and validates those URLs from a single API key.
-
-This separation is deliberate: trackers are durable, scraper addons come and go. Bring whichever streams you like — your lists don't care where the video came from.
+Tier 1 and Tier 2 are monthly or annual, and there is a one-time Lifetime option with everything in Tier 2. Current prices: **[watchario.app/pricing](https://watchario.app/pricing)**.
 
 ---
 
 ## Get Watchario
 
-### 🌐 Web app
-Open **[watchario.app](https://watchario.app)**, sign in (or skip auth for public browsing), and you're done. On mobile, tap the install icon in the address bar to add it as a PWA.
+Every device shares one account and one library. All platforms and install steps: **[watchario.app/get](https://watchario.app/get)**.
 
-### 🤖 Android / Android TV
-Download the latest APK and sideload it:
+| Platform | How |
+|---|---|
+| **Web / PWA** | Open **[watchario.app/home](https://watchario.app/home)**. Nothing to install; works in any modern browser and installs to your home screen. |
+| **Android** | **[Download watchario.apk](https://github.com/ttsiligkoudis/watchario-app/releases/download/android-latest/watchario.apk)**, direct from GitHub. |
+| **Android TV / Google TV** | The same APK; it installs on Android TV and Google TV. |
+| **Windows 10 and 11** | **[Download the 64-bit installer](https://github.com/ttsiligkoudis/watchario-app/releases/download/windows-latest/Watchario-Setup-x64.exe)** ([release page](https://github.com/ttsiligkoudis/watchario-app/releases/tag/windows-latest)). Per-user install, no administrator prompt. |
+| **iPhone & iPad** | Sideload with SideStore or AltStore (not on the App Store), see below. |
 
-**[⬇️ Download watchario.apk](https://github.com/ttsiligkoudis/watchario-app/releases/download/android-latest/watchario.apk)**
+> [!NOTE]
+> The Windows installer is not code-signed yet, so SmartScreen shows *"Windows protected your PC"*. Choose **More info → Run anyway**.
 
-> If Android warns about a signature conflict on update, uninstall the previous build first. Every release is signed with the same key, so normal updates install in place.
+### iPhone & iPad
 
-### 🪟 Windows
-Download the installer from the **[latest Windows release](https://github.com/ttsiligkoudis/watchario-app/releases/tag/windows-latest)** and run it — it installs for the current user, with no administrator prompt.
-
-> The installer isn't code-signed yet, so SmartScreen shows *"Windows protected your PC"* — choose **More info → Run anyway**.
-
-### 🍎 iPhone & iPad
-Watchario isn't on the App Store, so you sideload it with your own Apple ID. **[SideStore](https://sidestore.io)** is the recommended way — once it's set up it re-signs apps on the device itself, no computer needed every week:
-
-1. Set up SideStore by following its own guide: **[docs.sidestore.io — prerequisites](https://docs.sidestore.io/docs/installation/prerequisites)**.
+1. Install **[SideStore](https://sidestore.io)** on your device if you haven't already ([setup guide](https://docs.sidestore.io/docs/installation/prerequisites)).
 2. In SideStore, open **Sources → +** and add:
    ```
    https://watchario.app/altstore.json
    ```
-3. Install Watchario from that source. Refresh it in SideStore at least once a week (a free Apple ID signs apps for 7 days).
+3. Open Watchario in the source and tap **Get**.
+4. Sideloaded apps need refreshing about every 7 days. SideStore can do this for you in the background.
 
-AltStore works with the same source URL. The full guide — including AltStore setup and troubleshooting — is on the **[latest iOS release](https://github.com/ttsiligkoudis/watchario-app/releases/tag/ios-latest)**.
+AltStore works with the same source URL. More detail and troubleshooting are on the **[latest iOS release](https://github.com/ttsiligkoudis/watchario-app/releases/tag/ios-latest)**.
 
-### 📺 LG webOS TV *(pre-release)*
-The LG Content Store listing is in progress. Until it's live, TVs in **Developer Mode** can sideload the `.ipk` from the **[latest webOS build](https://github.com/ttsiligkoudis/watchario-app/releases/tag/webos-latest)**. Sideloaded builds don't update themselves — install the new `.ipk` to update.
+### Updates
 
-### 🎬 Stremio addon
-1. Open **[watchario.app](https://watchario.app)**.
-2. Sign in — with Google, an email and password, or AniList / MyAnimeList / Kitsu / Trakt.
-3. Toggle the catalogs you want, then click **Install to Stremio**.
-
-### 🧩 Browser extension
-Download the extension and load it unpacked:
-
-**[⬇️ Download watchario-extension.zip](https://github.com/ttsiligkoudis/watchario-app/releases/download/extension-latest/watchario-extension.zip)**
-
-Unzip it, then load it in your browser (Chrome/Edge/Brave: `chrome://extensions` → Developer mode → *Load unpacked*; Firefox: `about:debugging` → *Load Temporary Add-on*) and paste your Config UID from the app. It then auto-tracks anime as you watch on Crunchyroll, HiAnime/Zoro, and Aniwave — with an opt-in "track this site" button for anywhere else. Full install steps are in the [release notes](https://github.com/ttsiligkoudis/watchario-app/releases/tag/extension-latest).
+The apps update themselves. Android and Windows download and install new versions from this repository's releases; the iPhone and iPad app tells you when a new version is out. Release notes, in plain language, are at **[watchario.app/changelog](https://watchario.app/changelog)**.
 
 ---
 
 ## Open data & API
 
-We maintain the cross-service **ID-mapping data** that powers "one title, tracked everywhere," and publish it here for anyone to use — anime IDs mapped across AniList, Kitsu, MyAnimeList, IMDb, TMDB, TheTVDB, and AniDB, refreshed automatically.
+We maintain the cross-service anime **ID-mapping data** behind "one title, everywhere" (AniList, Kitsu, MyAnimeList, IMDb, TheTVDB, AniDB and more) and publish it here, refreshed automatically.
 
-➡️ **[Download the mapping data & format docs](docs/mapping-data.md)**
+➡️ **[Mapping data downloads and format docs](docs/mapping-data.md)**
 
-The full app API (search, match, media metadata, streams, subtitles, sync, notifications) is documented interactively at **[watchario.app/api/docs](https://watchario.app/api/docs)** — the browser extension is built entirely on it, and so can your own dashboard or scrobble script.
+Watchario also has a public JSON API under `/api/v1` (search, media metadata, episodes, id mappings, skip and filler data, plus account endpoints for your own scripts). Interactive docs: **[watchario.app/api/docs](https://watchario.app/api/docs)**.
 
 ---
 
 ## FAQ
 
 <details>
-<summary><strong>Does Watchario stream video itself?</strong></summary>
+<summary><strong>Is Watchario free?</strong></summary>
 
-No — and that's deliberate. Watchario is the **tracker + player shell**: it manages your lists, metadata, and progress, and plays streams you bring via Stremio-protocol addons (Torrentio, Comet, and friends, typically with a debrid service). Trackers are durable; scraper addons come and go.
+Yes. The Basic plan is free forever and needs no card. It covers watching with your own sources, tracking, syncing, the airing calendar and episode notifications. Tier 1 adds skip intro and outro (including skip-intro hints in Stremio), dashboard customisation and stream filtering. Tier 2 adds everything in Tier 1, plus offline downloads and up to 6 profiles, including kids profiles.
 </details>
 
 <details>
-<summary><strong>Do I need an AniList/MAL/Kitsu/Trakt account?</strong></summary>
+<summary><strong>Does Watchario host or stream any content?</strong></summary>
 
-No. You can create a **native Watchario account** (Google, or email + password) and keep your entire library on Watchario, with no external service linked. Link external trackers whenever you want them kept in sync.
+No. Watchario hosts nothing; it plays sources you configure yourself. Playback comes from Stremio-protocol addons and debrid accounts that you add. Watchario ships none of them.
 </details>
 
 <details>
-<summary><strong>Is the sync two-way?</strong></summary>
+<summary><strong>Do I need a debrid account?</strong></summary>
 
-There's one **primary** service that's the source of truth; linked secondaries receive writes. Promote a different account to primary to flip the direction, and use the one-shot full-sync to backfill everything from primary to the rest.
+Watchario itself doesn't require one. Whether you need one depends on the Stremio-protocol addons you add. Watchario neither sells nor includes either.
 </details>
 
 <details>
-<summary><strong>Which media types get notifications and a calendar?</strong></summary>
+<summary><strong>Do I need to set up addons myself?</strong></summary>
 
-Anime and series (episode-based) get both a weekly calendar and release notifications. Movies are browse/track/watch only — there are no movie episodes to schedule.
+No. Connect your debrid account and Watchario installs and configures the source addons for you. You can still add any Stremio-protocol addon by hand.
 </details>
 
 <details>
-<summary><strong>AniSkip auto-skip isn't working in Stremio.</strong></summary>
+<summary><strong>Which trackers does Watchario sync with?</strong></summary>
 
-Stock Stremio doesn't honour `skipIntro` / `skipOutro` / `skipRecap` hints — you need a compatible client (Stremio Enhanced is the easiest). The Watchario web and native players honour them natively, so auto-skip works out of the box there.
+AniList, MyAnimeList, Kitsu, Trakt, Simkl and MDBList. Your library lives in Watchario itself and syncs out to whichever of those you connect, so progress you record here is never lost if a tracker is unreachable. You don't need any of them to use Watchario.
 </details>
 
 <details>
-<summary><strong>I see "Needs re-auth" on a service.</strong></summary>
+<summary><strong>Does it track movies and TV as well as anime?</strong></summary>
 
-Its token expired or was revoked. Re-authenticate that service from your settings — the rest of your configuration, and your other linked accounts, are untouched.
+Yes. Anime, films and TV series all live in the same library, and you can turn any of the three off if you only care about the others.
 </details>
 
 <details>
-<summary><strong>Where is my data stored?</strong></summary>
+<summary><strong>Can I use Watchario inside Stremio?</strong></summary>
 
-In a database on the Watchario server, keyed to your install. Provider tokens are stored only to keep your sync working, and nothing is shared with third parties.
+Yes. Install Watchario as a Stremio addon from your settings: your lists and catalogues appear in Stremio and what you play there is tracked.
 </details>
 
----
+<details>
+<summary><strong>Android says the update conflicts with an existing package.</strong></summary>
 
-## Acknowledgements
-
-Watchario stands on the shoulders of the open anime-data community:
-
-- [Fribb/anime-lists](https://github.com/Fribb/anime-lists) and the [manami-project anime-offline-database](https://github.com/manami-project/anime-offline-database) — cross-service ID mapping
-- [AniSkip](https://aniskip.com) — community-curated intro/outro/recap markers
-- [AnimeFillerList](https://www.animefillerlist.com) — canon/filler tagging
-- [Stremio](https://www.stremio.com) and the Cinemeta addon — the addon platform and base metadata
-- [OpenSubtitles](https://opensubtitles.com) and [Wyzie](https://sub.wyzie.ru) — subtitles
+Every release is signed with the same key, so normal updates install in place. If Android still reports a conflict, uninstall the old build first (this signs you out on that device).
+</details>
 
 ---
 
 <div align="center">
 
-**Questions, bugs, or feature requests? [Open an issue.](https://github.com/ttsiligkoudis/watchario-app/issues)**
+**Questions, bugs or feature requests? [Open an issue.](https://github.com/ttsiligkoudis/watchario-app/issues)**
 
-Watchario · [watchario.app](https://watchario.app)
+[watchario.app](https://watchario.app) · [Download](https://watchario.app/get) · [Pricing](https://watchario.app/pricing) · [Changelog](https://watchario.app/changelog) · [License](LICENSE)
 
-<sub>Not affiliated with AniList, Kitsu, MyAnimeList, Trakt or Stremio.</sub>
+<sub>AniList, MyAnimeList, Kitsu, Trakt, Simkl, MDBList and Stremio are trademarks of their respective owners. Watchario is not affiliated with them.</sub>
 
 </div>
